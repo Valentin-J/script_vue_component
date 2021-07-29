@@ -1,0 +1,14 @@
+{
+  "name": "script-vue",
+  "version": "1.0.0",
+  "description": "generate components for vue",
+  "main": "index.js",
+  "scripts": {
+    "component": "node index.js"
+  },
+  "author": "chamalo",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^10.0.0"
+  }
+}
