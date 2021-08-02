@@ -7,7 +7,7 @@
     "component": "node index.js"
   },
   "bin": {
-    "script-vue": "index.js"
+    "script-vue": "./index.js"
   },
   "author": "chamalo",
   "license": "ISC",
