@@ -1,6 +1,6 @@
 {
   "name": "vue-js-component-generator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Component generator for VueJS. Generate component splited into 3 files (html, vue, css)",
   "main": "index.js",
   "files": [
