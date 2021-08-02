@@ -26,7 +26,7 @@ function main() {
         createFolder();
 
         // Nom des fichiers avec le chemin
-        let directoryNameSplit = directoryName.split('/')[1];
+        let directoryNameSplit = directoryName.split('/')[2];
         let filePath = directoryName + '/' + directoryNameSplit;
 
         // Creation des fichiers
