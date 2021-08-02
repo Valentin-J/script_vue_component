@@ -1,6 +1,6 @@
 {
   "name": "script-vue",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "generate components for vue",
   "main": "index.js",
   "files": [
