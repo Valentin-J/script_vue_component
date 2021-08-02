@@ -4,8 +4,12 @@
   "description": "generate components for vue",
   "main": "index.js",
   "scripts": {
-    "component": "node index.js"
+    "component": "node index.js",
+    "version": "npm build"
   },
+  "files": [
+    "index.js"
+  ],
   "bin": {
     "script-vue": "./index.js"
   },
