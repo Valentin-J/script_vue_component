@@ -83,7 +83,7 @@ function generateFiles(filePath, type) {
         .then(() => {
             console.log('Creation of ' + type + ' file');
             // Ecriture dans le fichier
-            writeIntoFile(filePath, type)
+            writeIntoFile(filePath, type);
         })
         .catch((err) => {
             console.log(err);
@@ -98,7 +98,7 @@ function writeIntoFile(fileNamePath, type) {
         })
         .catch(err => {
             console.log(err);
-        })
+        });
 }
 
 // Methode pour genere la data a ecrire dans les fichiers
@@ -115,7 +115,7 @@ function generateTemplate(fileNamePath, type) {
                 '\n\texport default {' +
                 '\n\t\tname : \'' + fileName + '\',' +
                 '\n\t};' +
-                '\n</script>'
+                '\n</script>';
         case ('html'):
             return fileName + ' component work !';
         default:
