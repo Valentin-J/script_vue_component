@@ -3,12 +3,17 @@ var fse = require('fs-extra');
 // Liste des styles applicable
 var styleList = ['css', 'scss', 'sass'];
 
-// Met le nom du dossier est des fichiers avec 1 maj puis min
-var directoryName = 'components/' + process.argv[2][0].toUpperCase() + process.argv[2].slice(1).toLocaleLowerCase();
+// Si il n'y a pas de nom pour le composant
+if (process.argv.length > 2) {
+    // Met le nom du dossier est des fichiers avec 1 maj puis min
+    var directoryName = 'src/components/' + process.argv[2][0].toUpperCase() + process.argv[2].slice(1).toLocaleLowerCase();
 
-var style = process.argv[3];
+    var style = process.argv[3];
 
-main();
+    main();
+} else {
+    console.log('Error, you must give a name to your component !');
+}
 
 function main() {
     // Si pas de style definie ou le style donnee n'est pas dans la liste des style
@@ -16,23 +21,18 @@ function main() {
         style = 'css';
     }
 
-    // Si il n'y a pas de nom pour le composant
-    if (directoryName === undefined) {
-        console.log('Error, you must give a name to your component');
-    } else {
-        if (checkDirectory()) {
-            // Creation du dossier
-            createFolder();
+    if (checkDirectory()) {
+        // Creation du dossier
+        createFolder();
 
-            // Nom des fichiers avec le chemin
-            let directoryNameSplit = directoryName.split('/')[1];
-            let filePath = directoryName + '/' + directoryNameSplit;
+        // Nom des fichiers avec le chemin
+        let directoryNameSplit = directoryName.split('/')[1];
+        let filePath = directoryName + '/' + directoryNameSplit;
 
-            // Creation des fichiers
-            generateFiles(filePath, 'vue');
-            generateFiles(filePath, style);
-            generateFiles(filePath, 'html');
-        }
+        // Creation des fichiers
+        generateFiles(filePath, 'vue');
+        generateFiles(filePath, style);
+        generateFiles(filePath, 'html');
     }
 }
 
