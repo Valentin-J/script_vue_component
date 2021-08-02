@@ -3,19 +3,18 @@
   "version": "1.0.3",
   "description": "generate components for vue",
   "main": "index.js",
-  "scripts": {
-    "component": "node index.js",
-    "version": "npm build"
-  },
   "files": [
     "index.js"
   ],
   "bin": {
-    "script-vue": "./index.js"
+    "vcomponent": "./index.js"
   },
   "author": "chamalo",
   "license": "ISC",
   "dependencies": {
+    "fs-extra": "^10.0.0"
+  },
+  "devDependencies": {
     "fs-extra": "^10.0.0"
   }
 }
