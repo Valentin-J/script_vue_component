@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fse = require('fs-extra');
 
 // Liste des styles applicable
