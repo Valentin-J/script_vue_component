@@ -9,7 +9,7 @@ VueJs Component Generator allows you to generate components for VueJS
 
 ## How-To ?
 
-ng install script-vue
+npm i vue-js-component-generator
 
 Just type vgc [nameOfComponent] [style]
 
@@ -20,6 +20,10 @@ Style can be CSS, SCSS, SASS
 If it doesn't work, try to tap 
 
 'npm link'
+
+## Note
+
+Still in dev !
 
 ## License
 
